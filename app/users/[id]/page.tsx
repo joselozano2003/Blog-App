@@ -8,27 +8,31 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const user = await prisma.user.findUnique({ where: { id: params.id } });
-  return { title: `User profile of ${user?.name}` };
+	const user = await prisma.user.findUnique({ where: { id: params.id } });
+	return { title: `User profile of ${user?.name}` };
 }
 
 export default async function UserProfile({ params }: Props) {
-  const user = await prisma.user.findUnique({ where: { id: params.id } });
-  const { name, bio, image, id } = user ?? {};
+	const user = await prisma.user.findUnique({ where: { id: params.id } });
+	const { name, bio, image, id } = user ?? {};
 
-  return (
-    <div>
-      <h1>{name}</h1>
+	return (
+		<div className='bg-base-300 pb-5 rounded'>
+			<div className='flex flex-row justify-center'>
+				<div>
+					<h1 className='text-3xl font-bold text-center m-5'>{name}</h1>
+					<img
+					width={300}
+					src={image ?? '/mememan.webp'}
+					alt={`${name}'s profile`}
+					/>
 
-      <img
-        width={300}
-        src={image ?? '/mememan.webp'}
-        alt={`${name}'s profile`}
-      />
-
-      <h3>Bio</h3>
-      <p>{bio}</p>
-
-    </div>
-  );
+				</div>
+				<div className='flex flex-col text-center min-w-[500px] justify-center'>
+					<h3 className='font-semibold text-2xl'>About Me</h3>
+					<p className='text-center'>{bio}</p>
+				</div>
+			</div>
+		</div>
+	);
 }
