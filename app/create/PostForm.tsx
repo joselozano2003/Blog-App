@@ -1,8 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import { ErrorAlert, SuccessAlert } from "@/components/UserCard/alerts";
-import { redirect } from 'next/navigation';
+import { ErrorAlert, SuccessAlert } from "@/components/alerts";
 
 export default function PostForm({ user }: any) {
 
@@ -72,13 +71,14 @@ export default function PostForm({ user }: any) {
             <p>From {user?.name}</p>
             <form className="mt-5 form-control text-center bg-[#e4e6fe] rounded-[25px] p-5 items-center" onSubmit={createPost}>
                 <label className="font-bold" htmlFor="title">Title</label>
-                <input type="text" name="title" className="input input-bordered w-full max-w-xs my-2 text-center"/>
+                <input type="text" name="title" className="input input-bordered w-full max-w-xs my-2 text-center" required={true}/>
                 <label htmlFor="content" className="font-bold">Content</label>
                 <textarea
                 className="textarea h-60 sm:w-[80%] md:w-[500px] my-2"
                 name="content"
                 cols={20}
                 rows={20}
+                required={true}
                 ></textarea>
                 <button className="btn-primary btn mt-5" type="submit">Create Post</button>
             </form>

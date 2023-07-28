@@ -24,7 +24,7 @@ export default async function Create() {
 
     return(
         <div>
-            <h1 className="text-center font-bold text-3xl">Make New Post for {user?.name}</h1>
+            <h1 className="text-center font-bold text-3xl">New Post</h1>
             <PostForm user={user}/>
         </div>
     )

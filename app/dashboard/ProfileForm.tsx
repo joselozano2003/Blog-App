@@ -1,6 +1,6 @@
 'use client';
 
-export function ProfileForm({ user }: any) {
+export default function ProfileForm({ user }: any) {
 
     const updateUser = async (e: React.FormEvent<HTMLFormElement>) => {
     
@@ -29,7 +29,8 @@ export function ProfileForm({ user }: any) {
 
 
     return (
-        <div className="flex justify-center my-6">
+        <div className="flex flex-col justify-center sm:items-center md:justify-start mb-5">
+            <h1 className="text-3xl font-bold mb-5">Modify Profile</h1>
             <div className="shadow-xl w-full max-w-xs p-5 bg-warning rounded">
             <form onSubmit={updateUser} className="form-control">
                 <label className="font-bold" htmlFor="name">Name</label>
@@ -49,7 +50,7 @@ export function ProfileForm({ user }: any) {
                 <label htmlFor="image" className="font-bold">Profile Image URL</label>
                 <input className="input input-bordered my-2" type="text" name="image" defaultValue={user?.image ?? ''} />
                 <div className="flex justify-center my-5">
-                    <button className="btn-primary btn w-[calc(50%)]" type="submit">Save</button>
+                    <button className="btn-primary btn w-[calc(50%)]" type="submit">Update</button>
                 </div>
             </form>
             </div>

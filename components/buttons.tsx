@@ -6,7 +6,6 @@ import Link from "next/link";
 
 export function SignInButton(){
     const { data: session, status } = useSession();
-    console.log(session, status)
 
     if (status === 'loading') {
         return <p className="text-xl font-semibold">Loading...</p>
@@ -14,14 +13,16 @@ export function SignInButton(){
 
     if (status === 'authenticated') {
         return (
-            <Link href={`/dashboard`}>
-                <img
-                src={session.user?.image ?? '/mememan.webp'}
-                width={30}
-                height={30}
-                alt="Your Name"
-                />
-            </Link>
+            <div className="flex items-center">
+                <Link href={`/dashboard`}>
+                    <img
+                    src={session.user?.image ?? '/mememan.webp'}
+                    width={30}
+                    height={30}
+                    alt="Your Name"
+                    />
+                </Link>
+            </div>
         );
     }
 

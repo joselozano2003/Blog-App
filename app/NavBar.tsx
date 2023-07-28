@@ -12,10 +12,17 @@ export default function NavBar() {
                 <ul className="mobile menu menu-horizontal">
                     <SignInButton />
                     <AuthCheck>
-                        <li><Link href="/create" className="text-xl font-bold hover:text-white hover:font-bold">Posts</Link></li>
-                        <li><Link href="/users" className="text-xl font-bold hover:text-white hover:font-bold">Users</Link></li>
+                        <li><Link href="/create" className="text-xl font-bold hover:text-white">Post</Link></li>
+                        <li><Link href="/users" className="text-xl font-bold hover:text-white">Users</Link></li>
                         <SignOutButton />
                     </AuthCheck>
+                    {/* <div className="dropdown dropdown-end">
+                        <label tabIndex={0} className="btn btn-ghost rounded-btn">Dropdown</label>
+                        <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                        <li><a>Item 1</a></li> 
+                        <li><a>Item 2</a></li>
+                        </ul>
+                    </div> */}
                 </ul>
             </div>
         </div>

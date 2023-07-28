@@ -23,27 +23,30 @@ export async function POST(req: NextRequest) {
         },
     });
     
-    return NextResponse.json(post);
-    
+    return NextResponse.json(post);   
 }
 
 export async function GET(req: NextRequest) {
-    const session = await getServerSession(authOptions);
-    const currentUserEmail = session?.user?.email!;
+    // const session = await getServerSession(authOptions);
+    // const currentUserEmail = session?.user?.email!;
 
-    const user = await prisma.user.findUnique({
-        where: {
-            email: currentUserEmail,
-        },
-    }).then((user) => user?.id!);
+    // const user = await prisma.user.findUnique({
+    //     where: {
+    //         email: currentUserEmail,
+    //     },
+    // }).then((user) => user?.id!);
 
-    const content = await prisma.post.findMany({
-        where: {
-            authorId: user,
-        },
-    });
+    // const content = await prisma.post.findMany({
+    //     where: {
+    //         authorId: user,
+    //     },
+    //     take: 10,
+    //     orderBy: {
+    //         createdAt: "desc",
+    //     },
+    // });
 
-    return NextResponse.json(content);
+    // return NextResponse.json(content);
 }
 
 export async function DELETE(req: NextRequest) {
