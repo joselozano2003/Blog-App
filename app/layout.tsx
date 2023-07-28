@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
 	return (
 		<AuthProvider>
-		<html lang="en" className='bg-base-200'>
+		<html lang="en" className=''>
 			<body className="">
 			<NavBar />
 			<div className='mx-10 pt-5 min-h-[calc(100vh-60px)]'>

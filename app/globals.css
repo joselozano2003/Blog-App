@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@media only screen and (max-width: 480px) {
+    .mobile {
+      display: none; /* Show the item when the screen size is 480 pixels or less */
+      /* Additional styles specific to the mobile version of the item can be added here */
+    }
+}

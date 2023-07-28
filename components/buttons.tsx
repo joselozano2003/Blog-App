@@ -9,7 +9,7 @@ export function SignInButton(){
     console.log(session, status)
 
     if (status === 'loading') {
-        return <>Loading...</>
+        return <p className="text-xl font-semibold">Loading...</p>
     }
 
     if (status === 'authenticated') {
