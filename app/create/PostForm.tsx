@@ -19,6 +19,7 @@ export default function PostForm({ user }: any) {
         const body = {
             title: formData.get('title'),
             content: formData.get('content'),
+            description: formData.get('description'),
         }
 
         console.log(body)
@@ -72,6 +73,8 @@ export default function PostForm({ user }: any) {
             <form className="mt-5 form-control text-center bg-[#e4e6fe] rounded-[25px] p-5 items-center" onSubmit={createPost}>
                 <label className="font-bold" htmlFor="title">Title</label>
                 <input type="text" name="title" className="input input-bordered w-full max-w-xs my-2 text-center" required={true}/>
+                <label className="font-bold" htmlFor="title">Description</label>
+                <input type="text" name='description' className="input input-bordered w-full max-w-xs my-2 text-center" required={true} />
                 <label htmlFor="content" className="font-bold">Content</label>
                 <textarea
                 className="textarea h-60 sm:w-[80%] md:w-[500px] my-2"

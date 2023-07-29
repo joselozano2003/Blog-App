@@ -71,6 +71,7 @@ model Post{
   	author   		User 		@relation(fields: [authorId], references: [id], onDelete: Cascade)
   	authorId 		String 		// relation scalar field  (used in the `@relation` attribute above)
 	title 			String
+	description 	String
 	content 		String
 	createdAt 		DateTime 	@default(now())
 }

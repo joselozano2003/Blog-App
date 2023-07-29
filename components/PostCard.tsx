@@ -4,7 +4,7 @@ export default function PostCard({ post }: any) {
             <div className="card-body text-center">
                 <h1 className="text-center font-bold text-2xl">{post.title}</h1>
                 <hr className="border-2 border-primary rounded"/>
-                <p>{post.content}</p>
+                <p>{post.description}</p>
             </div>
         </div>
     )
