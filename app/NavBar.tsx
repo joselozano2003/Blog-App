@@ -6,7 +6,7 @@ export default function NavBar() {
     return (
         <div className="navbar text-neutral-content bg-neutral sticky top-0 z-50">
             <div className="flex-1">
-                <Link href="/" className="btn btn-ghost normal-case text-xl">Da Blog</Link>
+                <Link href="/" className="btn btn-ghost normal-case text-xl">Da Blog.</Link>
             </div>
             <div className="flex justify-between">
                 <ul className="mobile menu menu-horizontal">

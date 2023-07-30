@@ -50,7 +50,6 @@ export default function PostForm({ user }: any) {
                     setIsSuccessVisible(false);
                 }, 5000);
                 window.location.href = '/dashboard'
-                // redirect('/dashboard')
             }
         
         }
@@ -83,7 +82,7 @@ export default function PostForm({ user }: any) {
                 rows={20}
                 required={true}
                 ></textarea>
-                <button className="btn-primary btn mt-5" type="submit">Create Post</button>
+                <button className="btn-primary btn mt-5 text-white" type="submit">Create Post</button>
             </form>
         </div>
     )

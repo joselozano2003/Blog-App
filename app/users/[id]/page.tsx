@@ -25,20 +25,20 @@ export default async function UserProfile({ params }: Props) {
 	});
 
 	return (
-		<>
-			<div className='bg-base-300 pb-5 rounded'>
-				<div className='flex flex-row justify-center m-5'>
-					<div className='w-[50%] flex flex-col items-center'>
+		<div>
+			<div className='bg-base-300 pb-5 rounded '>
+				<div className='flex flex-col md:flex-row sm:flex-col justify-center m-5 items-center'>
+					<div className='w-[50%] flex flex-col items-center mx-3'>
 						<h1 className='text-3xl font-bold text-center m-5'>{name}</h1>
 						<img
 						width={300}
-						src={image ?? '/mememan.webp'}
+						src={image ?? '/profile.png'}
 						alt={`${name}'s profile`}
 						/>
 
 					</div>
 					<div className='flex flex-col text-center min-w-[50%] justify-center'>
-						<h3 className='font-semibold text-2xl'>About Me</h3>
+						<h3 className='font-semibold text-2xl mt-5'>About Me</h3>
 						<p className='text-center'>{bio}</p>
 					</div>
 				</div>
@@ -48,7 +48,7 @@ export default async function UserProfile({ params }: Props) {
 				<div className='flex flex-row justify-center m-5'>
 					<div className='w-[50%] flex flex-col items-center'>
 						<h1 className='text-3xl font-bold text-center m-5'>Posts</h1>
-						<div className='flex flex-row'>
+						<div className='flex flex-row flex-wrap justify-center'>
 							{posts.map((post: any) => (
 							<PostCard post={post}/>
 							))}
@@ -56,6 +56,6 @@ export default async function UserProfile({ params }: Props) {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

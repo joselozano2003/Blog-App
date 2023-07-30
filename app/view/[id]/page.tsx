@@ -49,8 +49,7 @@ export default async function Post({ params }: Props) {
                     </p>
                     {currentUser?.id == post?.authorId ? (
                         <div className='flex flex-row justify-center'>
-                            <a href={`/edit/${id}`} className='btn btn-primary mt-5 mx-2'>Edit</a>
-                            <a href={`/delete/${id}`} className='btn btn-primary mt-5 mx-2'>Delete</a>
+                            <a href={`/edit/${id}`} className='btn btn-primary mt-5 mx-2'>Edit Post</a>
                         </div>
                     ) : (
                         <div></div>
