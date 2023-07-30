@@ -10,7 +10,7 @@ export default async function Users() {
   const users = await prisma.user.findMany();
 
   return (
-    <div className='flex flex-row lex-wrap'>
+    <div className='flex flex-row flex-wrap'>
       {users.map((user) => {
         return <UserCard key={user.id} {...user} />;
       })}
