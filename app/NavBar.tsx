@@ -16,14 +16,26 @@ export default function NavBar() {
                         <li><Link href="/users" className="text-xl font-bold hover:text-white">Users</Link></li>
                         <SignOutButton />
                     </AuthCheck>
-                    {/* <div className="dropdown dropdown-end">
-                        <label tabIndex={0} className="btn btn-ghost rounded-btn">Dropdown</label>
-                        <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                        <li><a>Item 1</a></li> 
-                        <li><a>Item 2</a></li>
-                        </ul>
-                    </div> */}
                 </ul>
+                <div className="desktop">
+                    <div className="flex flex-row ">
+                        <SignInButton />
+                        <div className="dropdown dropdown-end mobile desktop">  
+                        <label className="btn btn-circle swap swap-rotate mx-3 btn-neutral">
+                            <input type="checkbox" />
+
+                            <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+
+                            <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+                        </label>
+
+                            <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-neutral rounded-box w-30 mt-4">
+                            <li><Link href="/create">Post</Link></li> 
+                            <li><Link href="/users">Users</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

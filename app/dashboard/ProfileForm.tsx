@@ -29,7 +29,7 @@ export default function ProfileForm({ user }: any) {
 
 
     return (
-        <div className="flex flex-col justify-center sm:items-center md:justify-start mb-5">
+        <div className="flex flex-col justify-center items-center md:justify-start mb-5">
             <h1 className="text-3xl font-bold mb-5">Modify Profile</h1>
             <div className="shadow-xl w-full max-w-xs p-5 bg-warning rounded">
             <form onSubmit={updateUser} className="form-control">
