@@ -13,7 +13,7 @@ export default async function Home() {
 		orderBy: {
 			createdAt: 'desc',
 		},
-		take: 5,
+
 	});
 	return (
 		<main className='text-center'>
