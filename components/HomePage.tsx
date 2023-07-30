@@ -12,6 +12,8 @@ export default async function HomePage() {
 
 	});
 
+    const test = await prisma.post.findMany
+
 
     return (
         <div className='bg-base-300 pb-5 rounded'>

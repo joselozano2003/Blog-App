@@ -30,5 +30,9 @@ export function SignInButton(){
 }
 
 export function SignOutButton(){
-    return <button className="btn btn-warning ml-2" onClick={() => signOut()}>Sign Out</button>
+    return <button className="btn btn-warning ml-2 text-center" onClick={() => signOut()}>Sign Out</button>
+}
+
+export function MobileSignOutButton(){
+    return <button className="btn btn-warning btn-sm m-1 text-center" onClick={() => signOut()}>Sign Out</button>
 }
