@@ -84,3 +84,14 @@ export async function DELETE(req: NextRequest) {
 
     return NextResponse.json(post);
 }
+
+export async function GET(req: NextRequest) {
+    const posts = await prisma.post.findMany({
+        take: 10,
+        orderBy: {
+            createdAt: "desc",
+        },
+    });
+
+    return NextResponse.json(posts);
+}
