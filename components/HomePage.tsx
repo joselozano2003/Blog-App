@@ -8,6 +8,7 @@ export default async function HomePage() {
 		orderBy: {
 			createdAt: 'desc',
 		},
+        take: 10,
 
 	});
 
