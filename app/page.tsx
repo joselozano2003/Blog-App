@@ -1,9 +1,6 @@
-import Image from 'next/image'
-import { AnonCheck } from '@/components/AuthCheck'
-import PostCard from '@/components/PostCard'
-import { prisma } from '@/lib/prisma';
 
-import HomePage from '@/components/HomePage';
+import { AnonCheck } from '@/components/AuthCheck'
+import Link from 'next/link';
 
 export const metadata = {
     title: 'Da Blog',
@@ -19,7 +16,7 @@ export default async function Home() {
 			<AnonCheck>
 				<h2 className='text-3xl font-bold'>Please Log-In to Create Posts</h2>
 			</AnonCheck>
-			<HomePage/>
+			<Link href='/home'><button className='btn btn-primary'>Go Home</button></Link>
 		</main>
 	)
 }

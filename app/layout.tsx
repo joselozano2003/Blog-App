@@ -22,7 +22,7 @@ export default function RootLayout({
 		<html lang="en" className=''>
 			<body className="">
 			<NavBar />
-			<div className='m-10 min-h-[calc(100vh-60px)]'>
+			<div className='m-10 min-h-[calc(100vh-80px)]'>
 				{children}
 			</div>
 			</body>
