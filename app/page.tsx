@@ -3,7 +3,10 @@ import { AnonCheck } from '@/components/AuthCheck'
 import PostCard from '@/components/PostCard'
 import { prisma } from '@/lib/prisma';
 
-
+export const metadata = {
+    title: 'Da Blog',
+    description: 'Home page',
+};
 
 export default async function Home() {
 	const posts = await prisma.post.findMany({

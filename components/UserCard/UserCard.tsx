@@ -10,11 +10,12 @@ interface Props {
 
 export default function UserCard({ id, name, age, image }: Props) {
   return (
-    <div className='card w-96 bg-base-100 shadow-2xl'>
+    <div className='card w-96 bg-base-100 shadow-2xl m-5 flex flex-col items-center'>
       <figure className='px-10 pt-10'>
         <img
           src={image ?? '/mememan.webp'}
           alt={`${name}'s profile`}
+          className='rounded-full w-40 h-40'
         />
       </figure>
       <div className='card-body items-center text-center'>
