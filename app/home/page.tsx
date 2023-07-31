@@ -8,6 +8,7 @@ export const metadata = {
 export default function Home() {
     return (
         <main className='text-center'>
+            <h1 className='text-center font-semibold'>Home</h1>
             <HomePage/>
         </main>
     )
