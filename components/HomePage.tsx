@@ -12,7 +12,7 @@ export default async function HomePage() {
 
 	});
 
-	const usersPosts = await fetch('/api/content', {
+	const usersPosts = await fetch('/app/api/content', {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json',
