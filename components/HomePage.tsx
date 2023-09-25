@@ -17,6 +17,7 @@ export default async function HomePage() {
 		headers: {
 			'Content-Type': 'application/json',
 		},
+		cache: 'no-cache',
 	}).then((res) => res.json());
 
 	console.log(usersPosts);
