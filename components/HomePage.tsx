@@ -12,7 +12,14 @@ export default async function HomePage() {
 
 	});
 
-    const test = await prisma.post.findMany
+	const usersPosts = await fetch('/api/content', {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	}).then((res) => res.json());
+
+	console.log(usersPosts);
 
 
     return (
@@ -21,7 +28,7 @@ export default async function HomePage() {
 					<div className='w-[50%] flex flex-col items-center'>
 						<h1 className='text-3xl font-bold text-center m-5'>Recent Posts</h1>
 						<div className='flex flex-row flex-wrap justify-center'>
-							{posts.map((post: any) => (
+							{usersPosts.map((post: any) => (
 							<PostCard post={post}/>
 							))}
 						</div>
